@@ -21,8 +21,8 @@
 /*------Global Styles------*/
 html {
     box-sizing: border-box;
-    width: 1600px;
-    background-color: var(--body-color);
+    /* width: 1600px;
+    background-color: var(--body-color); */
 
 }
 *,
@@ -54,6 +54,7 @@ ul {
 
 } 
 a {
+    display: inline-block;
     color: inherit;
     text-decoration: none;
 }
@@ -65,15 +66,23 @@ img {
 
 .container {
     width: 1200px;
-    padding: 15px;
+    padding: 0 15px; 
 
 }
- section .container {
+.section {
+  
     padding-top: 94px;
     padding-bottom: 94px;
  }
+ /* section .container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+ } */
+
+
 /*-------Header Section---------*/
 .header {
+    box-sizing: border-box;
     background-color: var(--while-color);
     color: var(--header-color);
     font-weight: 500;
@@ -84,7 +93,8 @@ img {
 
 /*---Logo---*/
 .logo {
-    
+    padding-top: 24px;
+    padding-bottom: 25px;
     margin-left: 0;
     margin-right: 40px;
     font-family: var(--logo-font);
@@ -110,61 +120,52 @@ img {
     align-items: center;
 } 
 
- .navigation {
-    
-     display: contents;
- } 
- .menu div {
-     margin-left: 0;
- }
- .nav { 
+ .menu {   
     display: flex;
-    margin-left: 0;
- }
-  
- .nav li {
-     display: flex;
-     margin-left: 50px;
- }
+ } 
+.menu a {
+    padding: 32px 0;
+}
+ 
+.nav { 
+display: flex;
+margin-left: 0;
+margin-right: auto;
+}
 
- .contacts {
-     display: flex;
-    margin-left: auto;;
-    color: var(--text-color);
-    text-align: center;
- }  
-
- .contacts a {
-     padding-left: 10px;
- }
-
- /* .post-icon {
-     margin-right: 10px;
- } */
-/* .contacts li {
+.nav li {
+    display: flex;
     margin-left: 50px;
-} */
 
+}
+
+.contacts {
+     display: flex;
+    margin-right: 0;
+    color: var(--text-color);
+ }  
+.contacts li {
+    margin-left: 50px;
+}
+ .contacts a {
+    padding: 32px 0;
+ } 
 
 .nav a:hover,
 .nav a:focus,
-.post:hover,
-.post:focus
-
+.contacts a:hover,
+.contacts a:focus
  {
     color: var(--pretty-color);
-   
-}
-
-.post-icon:hover,
-.post-icon:active {
-     fill: var(--pretty-color);
 }
 .active {
     color: var(--pretty-color);
 }
 /*----------Hero Section--------*/
-
+.icon {
+    fill: var(--pretty-color);
+    stroke: var(--pretty-color);
+}
 .hero {
     height: 600px;
     background-color: var(--background-about-color);
@@ -216,6 +217,7 @@ img {
 .features-title {
     color: transparent;
     font-size: 0;
+ 
 }
 .feature {
     width: 270px;
@@ -229,17 +231,17 @@ img {
     font-weight: bold;
     color: var(--header-color);
     text-transform: uppercase;
-    
+    margin-bottom: 10px;
 }
-
 /*--------Studio Section---------*/
  .studio {
     font-size: 16px;
     letter-spacing: 0.03em;
-}
-.studio .container {
     padding-top: 0;
 }
+/* .studio .container {
+    padding-top: 0;
+} */
 .studio ul {
     display: flex;
 }
@@ -247,7 +249,7 @@ img {
     color: var(--header-color);
     font-size: 36px;
     font-weight: bold;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -267,7 +269,7 @@ img {
     color: var(--header-color);
     font-size: 36px;
     font-weight: 700;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     text-align: center;
    
  
@@ -286,21 +288,19 @@ img {
     color: var(--header-color);
     font-weight: 500;
     text-align: center;
-    padding-top: 2.3em;
-    padding-bottom: 1em;
+    margin-top: 2.3em;
+    margin-bottom: 1em;
 } 
 
 
 /*------Footer Section-------*/   
 .footer {
+    /* width: 1600px; */
     background-color: var(--footer-color);
     box-sizing: border-box;
     color:var(--while-color);
     font-size: 14px;
     line-height: 1.714;
-}
-
-.footer .container {
     padding-bottom: 60px;
     padding-top: 60px;
 }
@@ -363,8 +363,7 @@ button:hover {
 
 /* ----------Projects----------- */
 .portfolio {
-    padding: 0;
-    margin: 0;
+
     font-size: 16px;
     color: var(--text-color);
     line-height: 1.875;
