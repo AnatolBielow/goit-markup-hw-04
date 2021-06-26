@@ -110,7 +110,7 @@ img {
     align-items: center;
 } 
 
- .menu {
+ .navigation {
     
      display: contents;
  } 
@@ -119,6 +119,7 @@ img {
  }
  .nav { 
     display: flex;
+    margin-left: 0;
  }
   
  .nav li {
@@ -128,20 +129,36 @@ img {
 
  .contacts {
      display: flex;
-    margin-right: 0;
+    margin-left: auto;;
     color: var(--text-color);
+    text-align: center;
  }  
-.contacts li {
+
+ .contacts a {
+     padding-left: 10px;
+ }
+
+ /* .post-icon {
+     margin-right: 10px;
+ } */
+/* .contacts li {
     margin-left: 50px;
-}
+} */
 
 
 .nav a:hover,
 .nav a:focus,
-.contacts a:hover,
-.contacts a:focus
+.post:hover,
+.post:focus
+
  {
     color: var(--pretty-color);
+   
+}
+
+.post-icon:hover,
+.post-icon:active {
+     fill: var(--pretty-color);
 }
 .active {
     color: var(--pretty-color);
@@ -214,6 +231,7 @@ img {
     text-transform: uppercase;
     
 }
+
 /*--------Studio Section---------*/
  .studio {
     font-size: 16px;
