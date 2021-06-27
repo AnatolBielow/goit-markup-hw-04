@@ -15,15 +15,15 @@
     --button-hover: #188CE8;
     --body-color: #E5E5E5;
     --card-set-gap: 30px;
+    --icon-color: #afb1b8;
+    --footer-icon: rgba(255, 255, 255, 0.1);
+    --hero-background: url(../images/background.jpg);
 
 
 }
 /*------Global Styles------*/
 html {
     box-sizing: border-box;
-    /* width: 1600px;
-    background-color: var(--body-color); */
-
 }
 *,
 ::before,
@@ -41,13 +41,7 @@ body {
     color: var(--text-color);
     background-color: var(--while-color);
 }
-/* header,
 
-section,
-footer {
-    width: 1600px;
-    background-color: var(--while-color);
-} */
 ul {
     list-style: none;
     margin: 0; 
@@ -74,12 +68,7 @@ img {
     padding-top: 94px;
     padding-bottom: 94px;
  }
- /* section .container {
-    padding-top: 94px;
-    padding-bottom: 94px;
- } */
-
-
+ 
 /*-------Header Section---------*/
 .header {
     box-sizing: border-box;
@@ -93,8 +82,7 @@ img {
 
 /*---Logo---*/
 .logo {
-    padding-top: 24px;
-    padding-bottom: 25px;
+    display: flex;
     margin-left: 0;
     margin-right: 40px;
     font-family: var(--logo-font);
@@ -113,7 +101,44 @@ img {
 .studio2 {
     color: var(--while-color);
 }
-/*---Logo---*/
+/* ----------Icons-------------- */
+
+.icon {
+
+    width: 20px;
+    height: 20px;
+}
+.icons-list {
+    margin-bottom: 30px;    
+}
+.icons-list :not(:first-child) {
+    margin-left: 10px;
+}
+.icons-list a {
+    padding: 12px;
+}
+
+ .icons-list li {
+    display: inline-block;
+    fill: var(--icon-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    
+ }
+ .icons-list li:active,
+ .icons-list li:hover {
+     background: var(--pretty-color);
+     fill: var(--while-color);
+   
+ }
+ 
+ 
+ .feature-icon {
+     width: 70px;
+     height: 70px;
+     margin: 25px 100px 55px 100px;
+ }
 
  .header .container { 
     display: flex;
@@ -147,10 +172,26 @@ margin-right: auto;
 .contacts li {
     margin-left: 50px;
 }
- .contacts a {
-    padding: 32px 0;
+ .contact a {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 16px;
+    
  } 
-
+ .contacts-icon {
+     margin-right: 10px;
+     fill: currentColor;
+ }
+ .envelope {
+     width: 16px;
+     height: 12px;    
+ }
+ .smartphone {
+     width: 10px;
+     height: 16px;
+ }
 .nav a:hover,
 .nav a:focus,
 .contacts a:hover,
@@ -162,13 +203,11 @@ margin-right: auto;
     color: var(--pretty-color);
 }
 /*----------Hero Section--------*/
-.icon {
-    fill: var(--pretty-color);
-    stroke: var(--pretty-color);
-}
+
 .hero {
+    width: 1600px;
+    background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url(../images/background.jpg);
     height: 600px;
-    background-color: var(--background-about-color);
     color: var(--header-color);
     text-align: center;
     font-size: 36px;
@@ -234,14 +273,12 @@ margin-right: auto;
     margin-bottom: 10px;
 }
 /*--------Studio Section---------*/
+
  .studio {
     font-size: 16px;
     letter-spacing: 0.03em;
     padding-top: 0;
 }
-/* .studio .container {
-    padding-top: 0;
-} */
 .studio ul {
     display: flex;
 }
@@ -253,6 +290,9 @@ margin-right: auto;
     text-align: center;
 }
 
+.studio-items:first-child {
+    margin-left: 0;
+}
  /*--------Team Section-----------*/
 .team {
     font-size: 16px;
@@ -262,7 +302,7 @@ margin-right: auto;
 
 
  }
- .team ul {
+ .members {
      display: flex;
  }
 .team-title {
@@ -282,7 +322,7 @@ margin-right: auto;
     border-radius: 0px 0px 4px 4px;
 }
 .member p{
-    padding-bottom: 2em;
+    margin-bottom: 15px;
 }
 .name {
     color: var(--header-color);
@@ -292,10 +332,69 @@ margin-right: auto;
     margin-bottom: 1em;
 } 
 
+/* -------Clients Section----- */
+.clients-title {
+    color: var(--header-color);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.clients-list {
+    display: flex;
+}
+
+.clients-list a {
+    display: flex;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    color: var(--icon-color);
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    
+}
+
+.clients-list a:hover,
+.clients-list a:active {
+    border-color: var(--pretty-color);
+    color: var(--pretty-color);
+}
+/*----------Company Logo----- */
+
+.group1 {
+    width: 41px;
+    height: 46.7px;
+    fill: currentColor;
+}
+.group2 {
+    width: 40px;
+    height: 52px;
+    fill: currentColor;
+}
+.group3 {
+    width: 43.46px;
+    height: 41.18px;
+    fill: currentColor;
+}
+.group4 {
+    width: 84.44px;
+    height: 40.62px;
+    fill: currentColor;
+}
+.group5 {
+    width: 62.54px;
+    height: 45.43px;
+    fill: currentColor;
+}
+.group6 {
+    width: 93.79px;
+    height: 43.93px;
+    fill: currentColor;
+}
 
 /*------Footer Section-------*/   
 .footer {
-    /* width: 1600px; */
     background-color: var(--footer-color);
     box-sizing: border-box;
     color:var(--while-color);
@@ -304,24 +403,45 @@ margin-right: auto;
     padding-bottom: 60px;
     padding-top: 60px;
 }
+.footer .container {
+    display: flex;
+
+}
+
 .footer li {
     margin-bottom: 9px;
 }
 .footer .logo {
+    padding-top: 0;
     margin-bottom: 20px;
 }
 .adress {
     font-style: normal;
+    margin-left: 0;
+    margin-right: 82px;
    
 }
 .adress-link {
     color: var(--adress-link-color);
 }
-
+.socialmedia {
+    margin-left: 0;
+}
+.socialmedia h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+.socialmedia li {
+    background: var(--footer-icon);
+}
 .adress-link a:hover,
 .adress-link a:focus {
     color: var(--pretty-color);
 }
+
 
 /*--------------------Portfolio--------------------------*/
 
@@ -359,6 +479,9 @@ button:focus,
 button:hover {
     background-color: var(--pretty-color);
     color: var(--while-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+     0px 1px 2px rgba(0, 0, 0, 0.08),
+     0px 2px 2px rgba(0, 0, 0, 0.12);
 } 
 
 /* ----------Projects----------- */
@@ -386,6 +509,13 @@ button:hover {
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
 }
+.project:hover {
+    box-shadow: 0px 1px 1px
+     rgba(0, 0, 0, 0.12),
+     0px 4px 4px rgba(0, 0, 0, 0.06), 
+     1px 4px 6px rgba(0, 0, 0, 0.16);
+
+}
 .project-title {
     color: var(--header-color);
     font-size: 18px;
@@ -398,5 +528,6 @@ button:hover {
     border-left: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
 } 
 
