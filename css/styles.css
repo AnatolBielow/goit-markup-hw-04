@@ -82,6 +82,7 @@ img {
 
 /*---Logo---*/
 .logo {
+    
     display: flex;
     margin-left: 0;
     margin-right: 40px;
