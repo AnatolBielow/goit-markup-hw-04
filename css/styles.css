@@ -82,7 +82,7 @@ img {
 
 /*---Logo---*/
 .logo {
-    
+
     display: flex;
     margin-left: 0;
     margin-right: 40px;
@@ -202,6 +202,7 @@ margin-right: auto;
 }
 .active {
     color: var(--pretty-color);
+
 }
 /*----------Hero Section--------*/
 
