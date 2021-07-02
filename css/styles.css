@@ -108,13 +108,10 @@ img {
     height: 20px;
 }
 .icons-list {
-    display: inline-flex;
-    margin-bottom: 30px; 
-    
-   
+    display: inline-flex;      
 }
-.icons-list :not(:first-child) {
-    margin-left: 10px;
+.icons-list :not(:last-child) {
+    margin-right: 10px;
 }
 .icons-list a {
     width: 44px;
@@ -325,6 +322,11 @@ margin-right: auto;
  }
  .members {
      display: flex;
+    
+   
+ }
+ .members:first-child {
+     margin-left: 0;
  }
 .team-title {
     color: var(--header-color);
@@ -336,11 +338,16 @@ margin-right: auto;
  
 }
 .member {
+    margin-right: 30px;
     background: var(--while-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14), 
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+}
+.member-item {
+    width: 270px;
+    padding: 30px 32px;
 }
 .member p{
     margin-bottom: 15px;
@@ -349,8 +356,7 @@ margin-right: auto;
     color: var(--header-color);
     font-weight: 500;
     text-align: center;
-    margin-top: 2.3em;
-    margin-bottom: 1em;
+    margin-bottom: 10px;
 } 
 
 /* -------Clients Section----- */
@@ -436,7 +442,7 @@ margin-right: auto;
     padding-top: 0;
     margin-bottom: 20px;
 }
-.adress {
+address {
     font-style: normal;
     margin-left: 0;
     margin-right: 82px;
