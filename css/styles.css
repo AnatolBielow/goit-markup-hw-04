@@ -127,7 +127,7 @@ img {
  .icons-list a:focus,
  .icons-list a:hover {
      background: var(--pretty-color);
-     fill: var(--while-color);
+     color: var(--while-color);
    
  }
  .feature-icon-container {
