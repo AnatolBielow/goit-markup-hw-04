@@ -118,7 +118,7 @@ img {
     height: 44px;
     display: flex;
     align-items: center;   
-    fill: var(--icon-color);
+    color: var(--icon-color);
  
     border-radius: 50%;
 }
