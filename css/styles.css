@@ -254,7 +254,7 @@ margin-right: auto;
     cursor: pointer;
   
 }
-.sign-in:hover
+.sign-in:hover,
 .sign-in:focus {
     background-color: var(--button-hover);
 }
