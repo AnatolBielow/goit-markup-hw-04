@@ -431,9 +431,7 @@ margin-right: auto;
     display: flex;
 
 }
-.footer .logo {
-    display: block;
-}
+
 .footer-container {
     display: flex;
     align-items: baseline;
