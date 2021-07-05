@@ -59,6 +59,7 @@ img {
 .container {
     width: 1200px;
     padding: 0 15px; 
+    margin: 0 auto;
 
 }
 .section {
@@ -276,11 +277,13 @@ margin-right: auto;
 }
 .feature {
     width: 270px;
-    margin-left: 0;
     line-height: 1.714;
     letter-spacing: 0.03em;
 }
 
+.feature:not(:last-child) {
+    margin-right: 30px;
+}
 .feature-title {
     font-size: 14px;
     font-weight: bold;
@@ -425,14 +428,22 @@ margin-right: auto;
     color:var(--while-color);
     font-size: 14px;
     line-height: 1.714;
-    padding-bottom: 60px;
-    padding-top: 60px;
-}
-.footer .container {
     display: flex;
 
 }
+.footer .logo {
+    display: block;
+}
+.footer-container {
+    display: flex;
+    align-items: baseline;
+    padding: 60px 15px;
 
+
+}
+ .footer-item {
+     margin: 0;
+ }
 .footer li {
     margin-bottom: 9px;
 }
@@ -443,7 +454,6 @@ margin-right: auto;
 address {
     font-style: normal;
     margin-left: 0;
-    margin-right: 82px;
    
 }
 .adress-link a{
@@ -452,8 +462,8 @@ address {
 }
 
 .socialmedia {
-    margin-left: 0;
-    padding-top: 12px;
+    margin-left: 82px;
+    /* padding-top: 12px; */
 }
 .socialmedia p {
     font-size: 14px;
